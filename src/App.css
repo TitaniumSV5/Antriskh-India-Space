@@ -1,0 +1,15 @@
+/* General App styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  display: flex;
+  height: 80vh;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
