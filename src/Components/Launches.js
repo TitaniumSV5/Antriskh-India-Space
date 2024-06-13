@@ -4,10 +4,6 @@ import './Launch.css';
 
 function Launches() {
 
-
-
-
-
   const [activeSection, setActiveSection] = useState('upcoming');
   const showUpcomingLaunches = () => setActiveSection('upcoming');
   const showPastLaunches = () => setActiveSection('past');
@@ -29,9 +25,25 @@ function Launches() {
       <div className='content'>
           {activeSection === 'upcoming' && 
           <div className='upcomingsection'>
-            <button class="button-89" role="button">This is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section</button>
-            <button class="button-89" role="button">This is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section</button>
-            <button class="button-89" role="button">This is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section. This is the upcoming launches section.This is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches sectionThis is the upcoming launches section</button>
+            <button class="button-89" role="button">
+              <div className='launchName'>Name of the Mission</div>
+              <div className='launchDescription'>Time and Pad</div>
+            </button>
+            <button class="button-89" role="button">
+              <div className='launchName'>Name of the Mission</div>
+              <div className='launchDescription'>Time and Pad</div>
+            </button>
+            <button class="button-89" role="button">
+              <div className='launchName'>Name of the Mission</div>
+              <div className='launchDescription'>Time and Pad</div>
+            </button>
+            <button class="button-89" role="button">
+              <div className='launchName'>Name of the Mission</div>
+              <div className='launchDescription'>Time and Pad</div>
+            </button><button class="button-89" role="button">
+              <div className='launchName'>Name of the Mission</div>
+              <div className='launchDescription'>Time and Pad</div>
+            </button>
           </div>
           }
 

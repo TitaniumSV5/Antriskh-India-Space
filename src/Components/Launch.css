@@ -95,12 +95,14 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box; 
+    margin-top: 3%;
   }
 
   .upcomingsection {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 } 
 
 
@@ -118,7 +120,6 @@
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #ffffff00;
   outline-offset: .6em;
-  background-image: url("../Assets/mk3bg.png");
   border: 0;
   
 
@@ -129,7 +130,8 @@
   margin-bottom: 1%;
   margin-left: 4%;
   margin-right: 4%;
-  width: auto;
+  width: 100%;
+  padding-bottom: 10%;
 
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
