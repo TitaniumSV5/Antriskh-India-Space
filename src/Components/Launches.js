@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
 import './Launch.css';  
+import '../query.js'
 
 function Launches() {
 
@@ -25,25 +26,48 @@ function Launches() {
       <div className='content'>
           {activeSection === 'upcoming' && 
           <div className='upcomingsection'>
-            <button class="button-89" role="button">
-              <div className='launchName'>Name of the Mission</div>
-              <div className='launchDescription'>Time and Pad</div>
-            </button>
-            <button class="button-89" role="button">
-              <div className='launchName'>Name of the Mission</div>
-              <div className='launchDescription'>Time and Pad</div>
-            </button>
-            <button class="button-89" role="button">
-              <div className='launchName'>Name of the Mission</div>
-              <div className='launchDescription'>Time and Pad</div>
-            </button>
-            <button class="button-89" role="button">
-              <div className='launchName'>Name of the Mission</div>
-              <div className='launchDescription'>Time and Pad</div>
-            </button><button class="button-89" role="button">
-              <div className='launchName'>Name of the Mission</div>
-              <div className='launchDescription'>Time and Pad</div>
-            </button>
+          {
+          <div style={styles.container}>
+          {data.u_launches.map(launch => (
+            <CardComponent
+              key={launch.missionName}
+              missionName={launch.missionName}
+              launchpayload={launch.launchpayload}
+              payloadmass={launch.payloadmass}
+              launchdatetime={launch.launchdatetime}
+              launchorbit={launch.launchorbit}
+              launchpad={launch.launchpad}
+              launchvehicle={launch.launchvehicle}
+              liftoff={launch.liftoff}
+              coverimage={launch.coverimage}
+              createdBy={launch.createdBy}
+            />
+          ))}
+        </div>
+          
+                
+          
+          
+          
+          /* //   <button class="button-89" role="button">
+          //     <div className='launchName'>Name of the Mission</div>
+          //     <div className='launchDescription'>Time and Pad</div>
+          //   </button>
+          //   <button class="button-89" role="button">
+          //     <div className='launchName'>Name of the Mission</div>
+          //     <div className='launchDescription'>Time and Pad</div>
+          //   </button>
+          //   <button class="button-89" role="button">
+          //     <div className='launchName'>Name of the Mission</div>
+          //     <div className='launchDescription'>Time and Pad</div>
+          //   </button>
+          //   <button class="button-89" role="button">
+          //     <div className='launchName'>Name of the Mission</div>
+          //     <div className='launchDescription'>Time and Pad</div>
+          //   </button><button class="button-89" role="button">
+          //     <div className='launchName'>Name of the Mission</div>
+          //     <div className='launchDescription'>Time and Pad</div>
+          //   </button> */}
           </div>
           }
 
