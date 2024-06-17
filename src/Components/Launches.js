@@ -1,19 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
 import './Launch.css';  
-import '../query.js'
+// import './CSS/LaunchCard.css' //Contains LaunchCard CSS
+// import '../query.js'
+import { useQuery } from '@apollo/client';
+import BannerCard from './BannerCard.js';
+import { GET_DATA } from '../query.js';
 
 function Launches() {
+
+  const { loading, error, data } = useQuery(GET_DATA); //Getting data as per Query
+
 
   const [activeSection, setActiveSection] = useState('upcoming');
   const showUpcomingLaunches = () => setActiveSection('upcoming');
   const showPastLaunches = () => setActiveSection('past');
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error </p>;
 
   return (
     <main className='main'>
 
       <Navbar/>
 
+      {/* Navigation Buttons on top */}
       <div className='buttonContainer'>
         <button className='buttonbest' onClick={showUpcomingLaunches} role="button">
           <span className="text">Upcoming Launches</span>
@@ -27,23 +38,13 @@ function Launches() {
           {activeSection === 'upcoming' && 
           <div className='upcomingsection'>
           {
-          <div style={styles.container}>
-          {data.u_launches.map(launch => (
-            <CardComponent
-              key={launch.missionName}
-              missionName={launch.missionName}
-              launchpayload={launch.launchpayload}
-              payloadmass={launch.payloadmass}
-              launchdatetime={launch.launchdatetime}
-              launchorbit={launch.launchorbit}
-              launchpad={launch.launchpad}
-              launchvehicle={launch.launchvehicle}
-              liftoff={launch.liftoff}
-              coverimage={launch.coverimage}
-              createdBy={launch.createdBy}
-            />
-          ))}
-        </div>
+            <div>
+              {data.u_launches.map(launch => (
+                <BannerCard missionName={launch.missionName}
+                launchdatetime={launch.launchdatetime}
+                launchpad={launch.launchpad}></BannerCard>
+              ))}
+            </div>
           
                 
           
