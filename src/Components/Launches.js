@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
 import './Launch.css';  
+import UpLaunchData from './DataComps/UpLaunchData.js'
+
+
 // import './CSS/LaunchCard.css' //Contains LaunchCard CSS
-// import '../query.js'
-import { useQuery } from '@apollo/client';
-import BannerCard from './BannerCard.js';
-import { GET_DATA } from '../query.js';
+// // import '../query.js'
+// import { useQuery } from '@apollo/client';
+// import BannerCard from './BannerCard.js';
+// import { GET_UPCOMING_DATA } from './Queries/uLaunch.js';
 
 function Launches() {
 
-  const { loading, error, data } = useQuery(GET_DATA); //Getting data as per Query
+  // const { loading, error, data } = useQuery(GET_UPCOMING_DATA); //Getting data as per Query
 
 
   const [activeSection, setActiveSection] = useState('upcoming');
   const showUpcomingLaunches = () => setActiveSection('upcoming');
   const showPastLaunches = () => setActiveSection('past');
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error </p>;
+  // if (loading) return <p>Loading...</p>;
+  // if (error) return <p>Error </p>;
 
   return (
     <main className='main'>
@@ -38,13 +41,15 @@ function Launches() {
           {activeSection === 'upcoming' && 
           <div className='upcomingsection'>
           {
-            <div>
-              {data.u_launches.map(launch => (
-                <BannerCard missionName={launch.missionName}
-                launchdatetime={launch.launchdatetime}
-                launchpad={launch.launchpad}></BannerCard>
-              ))}
-            </div>
+
+            <UpLaunchData></UpLaunchData>
+            // <div>
+            //   {data.u_launches.map(launch => (
+            //     <BannerCard missionName={launch.missionName}
+            //     launchdatetime={launch.launchdatetime}
+            //     launchpad={launch.launchpad}></BannerCard>
+            //   ))}
+            // </div>
           
                 
           

@@ -1,6 +1,6 @@
 // src/components/CardComponent.js
 import React from 'react';
-import './CardComponent.css';
+import './CSS/CardComponent.css';
 
 const CardComponent = ({
   missionName,
