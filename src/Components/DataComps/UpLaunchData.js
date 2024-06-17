@@ -17,7 +17,9 @@ function UpLaunchData(){
           {data.u_launches.map(launch => (
             <BannerCard missionName={launch.missionName}
           launchdatetime={launch.launchdatetime}
-          launchpad={launch.launchpad}></BannerCard>
+          launchpad={launch.launchpad}
+          coverimage={launch.coverimage}
+          createdBy={launch.createdBy}></BannerCard>
            ))}
         </div>
     );

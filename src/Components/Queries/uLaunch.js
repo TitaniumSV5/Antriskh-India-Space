@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 
 export const GET_UPCOMING_DATA = gql`
   query Upcoming_Launch{
-  u_launches(stage: PUBLISHED) {
+  u_launches(stage: PUBLISHED,orderBy: launchdatetime_ASC) {
     missionName
     launchdatetime
     launchorbit
