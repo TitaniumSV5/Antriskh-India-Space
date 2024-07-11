@@ -6,6 +6,8 @@ export const GET_UPCOMING_DATA = gql`
   u_launches(stage: PUBLISHED,orderBy: launchdatetime_ASC) {
     missionName
     launchdatetime
+    stats1
+    stats2
     launchorbit
     launchpad
     launchvehicle
