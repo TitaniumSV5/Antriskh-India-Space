@@ -2,22 +2,23 @@
 import { gql } from '@apollo/client';
 
 export const GET_UPCOMING_DATA = gql`
-  query Upcoming_Launch{
-  u_launches(stage: PUBLISHED,orderBy: launchdatetime_ASC) {
-    missionName
-    launchdatetime
-    launchorbit
-    launchpad
-    launchvehicle
-    liftoff
-    coverimage {
-      url
+  query MyQuery {
+    u_launches(stage: PUBLISHED) {
+        id
+        launchdatetime
+        launchpad
+        missionName
+        publishedAt
+        updatedBy {
+            name
+        }
+        createdBy {
+            name
+        }
+        coverimage {
+            url
+        }
     }
-    createdBy {
-      name
-      publishedAt
-    }
-  }
 }
 `
-;
+  ;

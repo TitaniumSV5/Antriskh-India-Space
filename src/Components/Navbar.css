@@ -4,12 +4,18 @@
     height: 80px;
     justify-content: space-between;
     padding: 2px 5px;
-    background-color: #5b93be90;
+    background-color: #53b4ff;
     color: white;
+    position: sticky;
+    z-index: 3;
+    /* overflow: hidden;
+     */
+     top: 0;
   }
   
   .navbar-logo {
-    width: 180px; /* Adjust the size as needed */
+    width: 180px;
+    margin-left: 10px /* Adjust the size as needed */
   }
 
 
