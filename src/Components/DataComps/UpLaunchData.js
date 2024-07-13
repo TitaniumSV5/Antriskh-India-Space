@@ -43,6 +43,8 @@ function UpLaunchData() {
         <BannerCard missionName={launch.missionName}
           launchdatetime={launch.launchdatetime}
           launchpad={launch.launchpad}
+          stats1={launch.stats1}
+          stats2={launch.stats2}
           coverimage={launch.coverimage}
           createdBy={launch.createdBy}></BannerCard>
       ))}
