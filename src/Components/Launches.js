@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
 import './Launch.css';  
 import UpLaunchData from './DataComps/UpLaunchData.js';
+import { useQuery } from '@apollo/client';
+import { GET_UPCOMING_DATA } from './Queries/uLaunch.js';
 
 function Launches() {
   const [activeSection, setActiveSection] = useState('upcoming');
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const { loading, error, data } = useQuery(GET_UPCOMING_DATA);
 
   const showUpcomingLaunches = () => setActiveSection('upcoming');
   const showPastLaunches = () => setActiveSection('past');
@@ -39,6 +43,11 @@ function Launches() {
     };
   }, [lastScrollY]);
 
+  const today = new Date().toISOString();
+
+  const upcomingLaunches = data?.u_launches.filter(launch => launch.launchdatetime < today);
+  const pastLaunches = data?.u_launches.filter(launch => launch.launchdatetime >= today);
+
   return (
     <main className='main'>
       <div className={`navbar ${showNavbar ? '' : 'navbar-hidden'}`}>
@@ -56,18 +65,18 @@ function Launches() {
       </div>
 
       <div className='content'>
+        {loading && <div className="loader"></div>}
+        {error && <p>Error: {error.message}</p>}
+        
         {activeSection === 'upcoming' && 
         <div className='upcomingsection'>
-          <UpLaunchData />
+          <UpLaunchData launches={upcomingLaunches} />
         </div>
         }
 
         {activeSection === 'past' && 
         <div className='pastsection'>
-          <UpLaunchData />
-          <div>            
-            hi hello I am under the water
-          </div>
+          <UpLaunchData launches={pastLaunches} />
         </div>
         }
       </div>
