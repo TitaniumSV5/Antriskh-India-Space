@@ -43,10 +43,10 @@ function Launches() {
     };
   }, [lastScrollY]);
 
-  const today = new Date().toISOString();
+  const today = new Date();
 
-  const upcomingLaunches = data?.u_launches.filter(launch => launch.launchdatetime < today);
-  const pastLaunches = data?.u_launches.filter(launch => launch.launchdatetime >= today);
+  const upcomingLaunches = data?.u_launches.filter(launch => new Date(launch.launchdatetime) > today);
+  const pastLaunches = data?.u_launches.filter(launch => new Date(launch.launchdatetime) <= today);
 
   return (
     <main className='main'>

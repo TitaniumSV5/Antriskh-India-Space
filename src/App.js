@@ -7,12 +7,18 @@ import Spacecrafts from './Components/Spacecrafts.js';
 import Gaganyaan from './Components/Gaganyaan.js'
 import Others from './Components/Others.js'
 import Home from './Components/Home.js'
+import Detailpage from './Components/Detailpage.js'
 
 
 function App() {
   return (
 
     <Routes>
+      <Route path= "/details" element = {
+        <div>
+          <Detailpage/>
+        </div>
+      } />
 
       <Route index element={
         <Home/>
