@@ -1,13 +1,13 @@
 import './App.css';
 import {Route, Routes} from 'react-router-dom';
 
-import Launches from './Components/Launches.js';
-import Rockets from './Components/Rockets.js'
-import Spacecrafts from './Components/Spacecrafts.js';
-import Gaganyaan from './Components/Gaganyaan.js'
-import Others from './Components/Others.js'
-import Home from './Components/Home.js'
-import Detailpage from './Components/Detailpage.js'
+import Launches from './Components/pages/Launches.js';
+import Rockets from './Components/pages/Rockets.js'
+import Spacecrafts from './Components/pages/Spacecrafts.js';
+import Gaganyaan from './Components/pages/Gaganyaan.js'
+import Others from './Components/pages/Others.js'
+import Home from './Components/pages/Home.js'
+import Detailpage from './Components/pages/Detailpage.js'
 
 
 function App() {
@@ -15,9 +15,7 @@ function App() {
 
     <Routes>
       <Route path= "/details" element = {
-        <div>
-          <Detailpage/>
-        </div>
+        <Detailpage/>
       } />
 
       <Route index element={

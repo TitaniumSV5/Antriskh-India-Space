@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from './Navbar.js';
+import Navbar from '../util/Navbar.js';
 
-function Detailpage() {
+function Others() {
   return (
     <main>
         <Navbar/>
@@ -12,4 +12,4 @@ function Detailpage() {
   );
 }
 
-export default Detailpage;
+export default Others;

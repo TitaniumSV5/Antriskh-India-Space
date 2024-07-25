@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from './Navbar.js';
+import Navbar from '../util/Navbar.js';
 
-function Gaganyaan() {
+function Rockets() {
   return (
     <main>
         <Navbar/>
         <div className='content'>
-          This is Gaganyaan Page
+          This is Rockets Page
         </div>
     </main>
   );
 }
 
-export default Gaganyaan;
+export default Rockets;

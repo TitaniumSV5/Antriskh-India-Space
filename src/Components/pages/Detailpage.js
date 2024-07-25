@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from './Navbar.js';
+import Navbar from '../util/Navbar.js';
 
-function Home() {
+function Detailpage() {
   return (
     <main>
         <Navbar/>
         <div className='content'>
-          This is Home Page
+          This is Others Page
         </div>
     </main>
   );
 }
 
-export default Home;
+export default Detailpage;

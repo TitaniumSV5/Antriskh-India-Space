@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar.js';
-import './Launch.css';  
-import UpLaunchData from './DataComps/UpLaunchData.js';
+import Navbar from '../util/Navbar.js';
+import '../util/CSS/Launch.css';  
+import UpLaunchData from '../DataComps/UpLaunchData.js';
 import { useQuery } from '@apollo/client';
-import { GET_UPCOMING_DATA } from './Queries/uLaunch.js';
+import { GET_UPCOMING_DATA } from '../Queries/uLaunch.js';
 
 function Launches() {
   const [activeSection, setActiveSection] = useState('upcoming');

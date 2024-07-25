@@ -3,10 +3,10 @@
 }
 
 .main {
-    background-image: url('../Assets/LaunchesBG.jpg'); 
+    background-image: url('../../../Assets/LaunchesBG.jpg'); 
     background-size: cover;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/LaunchesBG.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../Assets/LaunchesBG.jpg');
     max-height: fit-content; 
   }
   

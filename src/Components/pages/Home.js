@@ -1,15 +1,16 @@
 import React from 'react';
-import Navbar from './Navbar.js';
+import Navbar from '../util/Navbar.js';
 
-function Spacecrafts() {
+
+function Home() {
   return (
     <main>
         <Navbar/>
         <div className='content'>
-          This is Spacecrafts Page
+          This is Home Page
         </div>
     </main>
   );
 }
 
-export default Spacecrafts;
+export default Home;

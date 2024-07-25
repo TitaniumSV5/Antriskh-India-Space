@@ -1,6 +1,6 @@
 import React from 'react';
 import '../CSS/loader.css';
-import BannerCard from '../BannerCard.js';
+import BannerCard from '../util/BannerCard.js';
 
 function UpLaunchData({ launches }) {
   if (!launches || launches.length === 0) {

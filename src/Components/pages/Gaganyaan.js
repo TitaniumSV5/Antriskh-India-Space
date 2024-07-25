@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from './Navbar.js';
+import Navbar from '../util/Navbar.js';
 
-function Others() {
+function Gaganyaan() {
   return (
     <main>
         <Navbar/>
         <div className='content'>
-          This is Others Page
+          This is Gaganyaan Page
         </div>
     </main>
   );
 }
 
-export default Others;
+export default Gaganyaan;

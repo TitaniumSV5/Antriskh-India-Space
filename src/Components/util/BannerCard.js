@@ -1,5 +1,5 @@
 import React from 'react';
-import './CSS/LaunchCard.css';
+import '../CSS/LaunchCard.css';
 
 const BannerCard = (props) =>{
 

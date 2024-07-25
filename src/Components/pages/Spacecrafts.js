@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from './Navbar.js';
+import Navbar from '../util/Navbar.js';
 
-function Rockets() {
+function Spacecrafts() {
   return (
     <main>
         <Navbar/>
         <div className='content'>
-          This is Rockets Page
+          This is Spacecrafts Page
         </div>
     </main>
   );
 }
 
-export default Rockets;
+export default Spacecrafts;

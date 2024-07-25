@@ -9,7 +9,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 const Link = "https://ap-south-1.cdn.hygraph.com/content/clww78g2h06c407te5js5mnyz/master" 
 
 const client = new ApolloClient({
-  uri: Link, // Replace with your GraphQL endpoint
+  uri: Link, 
   cache: new InMemoryCache(),
 });
 
@@ -23,7 +23,4 @@ root.render(
   </ApolloProvider>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
