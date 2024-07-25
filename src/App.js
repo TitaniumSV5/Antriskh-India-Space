@@ -23,33 +23,27 @@ function App() {
       }/>
 
       <Route path= "/Launches" element = {
-        <div>
-          <Launches/>
-        </div>
+        <Launches/>
       } />
 
       <Route path= "/Rockets" element = {
-        <div>
-          <Rockets/>
-        </div>
+        
+        <Rockets/>
+        
       } />
 
       <Route path= "/Spacecrafts" element = {
-        <div>
-          <Spacecrafts/>
-        </div>
+       
+        <Spacecrafts/>
+       
       } />
 
       <Route path= "/Gaganyaan" element = {
-        <div>
-          <Gaganyaan/>
-        </div>
+        <Gaganyaan/>
       } />
 
       <Route path= "/Others" element = {
-        <div>
-          <Others/>
-        </div>
+        <Others/>
       } />
 
       
