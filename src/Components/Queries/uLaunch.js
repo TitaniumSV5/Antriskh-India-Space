@@ -18,6 +18,8 @@ export const GET_UPCOMING_DATA = gql`
         coverimage {
             url
         }
+        stats1
+        stats2    
     }
 }
 `
