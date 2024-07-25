@@ -9,6 +9,8 @@ export const GET_UPCOMING_DATA = gql`
         launchpad
         missionName
         publishedAt
+        stats1
+        stats2
         updatedBy {
             name
         }

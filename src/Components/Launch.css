@@ -148,3 +148,21 @@
   background: var(--color);
   color: #b34545;
 }
+
+
+
+
+
+
+/* Navbar styles */
+.navbar {
+  width: 99.4%;
+  
+  transition: top 0.3s ease-in-out;
+}
+
+/* Hide the navbar by moving it off-screen */
+.navbar-hidden {
+  top: -100px; /* Adjust based on your navbar height */
+}
+

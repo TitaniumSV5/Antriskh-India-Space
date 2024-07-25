@@ -11,7 +11,12 @@
     }
     
     /*Buttons on top*/
-    
+    @font-face {
+      font-family: 'stats';
+      src: url('../../Assets/good\ times\ rg.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+  }
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
     
     .buttoncontainer {
@@ -22,7 +27,7 @@
       justify-content: center;
       border-radius: 30px;
       appearance: none;
-      background-color: #5b93be90;
+      background-color: #53b4ff;
       border-width: 0;
       box-sizing: border-box;
       color: #f6f6f6;
@@ -180,10 +185,12 @@
     right: 18px;
     color: white;
     text-align: right;  /* Add other styles for the caption text */
+    font-family: 'stats', sans-serif;
+
   }
   .launch-caption p{
-    font-size: 20px;
-    font-family: Clarkson, Helvetica, sans-serif;
+    font-size: 23px;
+    font-family: 'stats', sans-serif;
     text-transform: none;
     
     
@@ -199,15 +206,17 @@
   
   .launch-details h3
   {
-    color: #fff;
+    color: #ffffff;
     font-family: Clarkson, Helvetica, sans-serif;
   
   
   }
   .launch-details p {
-    color: #fff;
+    color: #ffffff;
     font-family: Clarkson, Helvetica, sans-serif;
-    margin-bottom: -1%;
+    margin-bottom: -1.5%;
+    font-size: 25px;
+    font-weight: 600;
   }
   
   
@@ -221,7 +230,6 @@
     font-size: 24px;
     margin-bottom: 5px;
     font-family: Clarkson, Helvetica, sans-serif;
-  
   }
   
   .launch-image img {
