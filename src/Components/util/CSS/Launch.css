@@ -1,127 +1,178 @@
-@media screen and (min-width: 1280px) , screen and (max-width: 1920px) {
-  #yourID{  overflow-x: hidden; overflow-y: hidden; }                     
+@media screen and (min-width: 1280px),
+screen and (max-width: 1920px) {
+  #yourID {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
 }
 
 .main {
-    background-image: url('../../../Assets/LaunchesBG.jpg'); 
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../Assets/LaunchesBG.jpg');
-    max-height: fit-content; 
-  }
-  
-  /*Buttons on top*/
-  
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-  
-  .buttoncontainer {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .buttonbest {
-    justify-content: center;
-    border-radius: 30px;
-    appearance: none;
-    background-color: #5b93be90;
-    border-width: 0;
-    box-sizing: border-box;
-    color: #f6f6f6;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Clarkson, Helvetica, sans-serif;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    line-height: 1em;
-    margin: 50px 200px;
-    margin-left: 350px;
-    margin-bottom: -30px;
-    opacity: 1;
-    outline: 0;
-    padding: 1.5em 2.0em;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-rendering: geometricprecision;
-    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-  }
-  
-  .buttonbest:before {
-    animation: opacityFallbackOut .5s step-end forwards;
-    backface-visibility: hidden;
-    background-color: #80cad9;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transform: translateZ(0);
-    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
-    width: 100%;
-    border-radius: 30px;
-  }
-  
-  .buttonbest:hover:before {
-    animation: opacityFallbackIn 0s step-start forwards;
-    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-    border-radius: 30px;
-  }
-  
-  .buttonbest:after {
-    background-color: #000000;
-    border-radius: 30px;
-  }
-  
-  .buttonbest span {
-    z-index: 1;
-    position: relative;
-  }
+  background-image: url('../../../Assets/LaunchesBG.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../Assets/LaunchesBG.jpg');
+  max-height: fit-content;
+}
+
+/*Buttons on top*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding:0px 20px 0px 20px  ;
+  /* border: 3px solid black; */
+}
+
+.buttonbest {
+  justify-content: center;
+  border-radius: 30px;
+  appearance: none;
+  background-color: #5b93be90;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #f6f6f6;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson, Helvetica, sans-serif;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 50px 200px;
+  margin-left: 350px;
+  margin-bottom: -30px;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.0em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.buttonbest:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #80cad9;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+  border-radius: 30px;
+}
+
+.buttonbest:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  border-radius: 30px;
+}
+
+.buttonbest:after {
+  background-color: #000000;
+  border-radius: 30px;
+}
+
+.buttonbest span {
+  z-index: 1;
+  position: relative;
+}
 
 
-  /*Launch banners*/
+/* searchBox */
 
-  .content {
-    background-color: rgba(255, 255, 255, 0); 
-    padding: 20px;
-    border-radius: 10px;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box; 
-    margin-top: 3%;
-  }
+.searchbox{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  /* border: 1px solid black; */
+  height: 100px;
+  /* width: 100%; */
+  align-items: center;
+  justify-items: center;
+}
+.sectionbox{
+  flex: 1;
+  /* border: 1px solid black; */
+}
 
-  .upcomingsection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-} 
+.inputbox{
+  height: 45px;
+  width: 350px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-inline: 5px;
+  border: none;
+}
+
+.inputbox:focus{
+  outline: none;
+}
+.inputbtn{
+  height: 45px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* .btn-icon{
+  width: ;
+} */
+/*Launch banners*/
+
+.content {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3%;
+}
+
+.upcomingsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
 
 .button-89 {
-  --b: 3px;   /* border thickness */
-  --s: .45em; /* size of the corner */
+  --b: 3px;
+  /* border thickness */
+  --s: .45em;
+  /* size of the corner */
   --color: #ffffff;
-  
+
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
   background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #ffffff00;
   outline-offset: .6em;
   border: 0;
-  
+
 
   user-select: none;
   -webkit-user-select: none;
@@ -138,7 +189,7 @@
 }
 
 .button-89:hover,
-.button-89:focus-visible{
+.button-89:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
@@ -157,12 +208,12 @@
 /* Navbar styles */
 .navbar {
   width: 99.4%;
-  
+
   transition: top 0.3s ease-in-out;
 }
 
 /* Hide the navbar by moving it off-screen */
 .navbar-hidden {
-  top: -100px; /* Adjust based on your navbar height */
+  top: -100px;
+  /* Adjust based on your navbar height */
 }
-

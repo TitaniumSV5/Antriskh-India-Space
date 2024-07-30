@@ -9,7 +9,7 @@ const BannerCard = (props) =>{
     const stats1 = props.stats1
     const stats2 = props.stats2
     const coverimage = props.coverimage
-    const createdBy = props.createdBy
+    // const createdBy = props.createdBy
 
     const styles = {
         backgroundImage: `url(${coverimage.url || '../Assets/gslv.jpg'})`, // Handle missing image gracefully
@@ -22,7 +22,7 @@ const BannerCard = (props) =>{
         //     <div className="launchName">{missionName}</div>
         //     <div className="launchDescription">{`${time} and ${pad}`}</div>
         // </button>
-        <a href="Upcoming Launch Pages/@91_PSLV-C58.html" class="no-underline">
+        <a class="no-underline">
             <div class="launch-card" style={styles}>
               <div class="launch-details">
                 <h3>{missionName}</h3>
