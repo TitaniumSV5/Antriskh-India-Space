@@ -6,13 +6,16 @@ import { useQuery } from '@apollo/client';
 import { GET_UPCOMING_DATA } from '../Queries/uLaunch.js';
 import { updateWrappedQueryRef } from '@apollo/client/react/internal';
 
+
 function Launches() {
   const [activeSection, setActiveSection] = useState('upcoming');
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [upcomingLaunches,setupcomingLaunches] = useState([])
-  const [pastLaunches,setpastLaunches] = useState([])
+  const [upcomingLaunches, setupcomingLaunches] = useState([])
+  const [pastLaunches, setpastLaunches] = useState([])
   const [filterSet, setFilterSet] = useState([])
+  const [searchLen, setSearchLen] = useState({upcomingLength:0,pastLength:0})
+  const [typing,setTyping] = useState(false)
 
   const { loading, error, data } = useQuery(GET_UPCOMING_DATA);
 
@@ -47,45 +50,43 @@ function Launches() {
     };
   }, [lastScrollY]);
 
-
-
   useEffect(() => {
+
     setFilterSet(data)
 
-    
   }, [data])
 
   const filterResultSet = (event) => {
     let query = event.target.value || "";
     console.log(query);
 
-    if (query == "") {
+    if (query === "") {
       setFilterSet(data)
+      setTyping(false)
+
     } else {
+      setTyping(true)
+      let lowerCaseQueries = query.toLowerCase().split(" ");
+      let filteredData = data;
 
-      let lowerCaseQuery = query.toLowerCase();
-
-      const filteredData = data.u_launches.filter((launches) => {
-
-        if (launches.missionName.toLowerCase().includes(lowerCaseQuery)) {
-          return true;
-        }
-        return false;
-        // Add more filters here 
-        // if(launches.missiondescription.toLowerCase().includes(lowerCaseQuery)){
-        //   return true;
-        // }
-
+      lowerCaseQueries.forEach((query) => {
+        filteredData = filteredData.u_launches.filter((launches) => {
+          if (launches.missionName.toLowerCase().includes(query)) {
+            return true;
+          }
+          return false;
+          // Add more filters here 
+        })
+        filteredData = { u_launches: filteredData }
       })
-      // console.log(filteredData);
-      
-      setFilterSet({u_launches:filteredData})
-      console.log("filterSet",filterSet);
-      
+
+      setFilterSet(filteredData)
+      console.log(filteredData.u_launches.length);
     }
+
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     const today = new Date();
 
     const upData = filterSet?.u_launches?.filter(launch => new Date(launch.launchdatetime) > today);
@@ -95,13 +96,14 @@ function Launches() {
     setupcomingLaunches(upData)
     setpastLaunches(pastData)
 
-    console.log("Up: ",upData);
-    console.log("Past",pastLaunches);
-    
-    
-  },[filterSet,data])
+    if(typing){
+      setSearchLen({upcomingLength:upData.length,pastLength:pastData.length})
+    }
 
- 
+
+  }, [filterSet, data])
+
+  // console.log("length ",upcomingLaunches.length,pastLaunches.length);
 
 
   return (
@@ -116,16 +118,16 @@ function Launches() {
         <div className='searchbox'>
           <input type='text' placeholder='Search here' className='inputbox' onChange={filterResultSet}></input>
           <button className='inputbtn' >
-          <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/recurring-appointment.png" alt="recurring-appointment"/>
+            <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/recurring-appointment.png" alt="recurring-appointment" />
           </button>
         </div>
 
         <div className='sectionbox'>
-          <button className='buttonbest' onClick={showUpcomingLaunches} role="button">
-            <span className="text">Upcoming Launches</span>
+          <button className='buttonbest' onClick={showUpcomingLaunches} >
+            <span className="text">Upcoming Launches {(typing) ? searchLen.upcomingLength : ""} </span>
           </button>
-          <button className='buttonbest' onClick={showPastLaunches} role="button">
-            <span className="text">Past Launches</span>
+          <button className='buttonbest' onClick={showPastLaunches} >
+            <span className="text">Past Launches {(typing) ? searchLen.pastLength : ""}</span>
           </button>
         </div>
       </div>
