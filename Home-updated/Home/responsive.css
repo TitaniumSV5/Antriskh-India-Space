@@ -154,14 +154,14 @@
     }
     .header .header__logo {
         flex-grow: 0;
-        margin-left: 6rem;
-        margin-right: 2rem;
+        margin-left: 2rem;
+        margin-right: 40rem;
     }
     .header .header__logo a {
         width: 10rem;
     }
     .navigation__menu {
-        max-width: 30rem;
+        max-width: 20rem;
     }
     .footer .footer__list {
         width: 40%;

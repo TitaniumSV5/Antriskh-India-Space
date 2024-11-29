@@ -20,11 +20,10 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 .mission__container .background.one {
-    background-image: url(../Home/Assets/p1.webp);
-    background-position: 100% center;
+    background-image: url(../Home/Assets/p2sslv.webp);
 }
 .mission__container .background.two {
-    background-image: url(../Home/Assets/p2sslv.webp);
+    background-image: url(../Home/Assets/p2pslv.webp);
 }
 .mission__container .background.three {
     background-image: url(../Home/Assets/p3.webp);

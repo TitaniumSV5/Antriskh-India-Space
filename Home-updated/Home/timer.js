@@ -4,7 +4,7 @@ const hoursSpan = document.querySelector(".hours");
 const minutesSpan = document.querySelector(".minutes");
 const secondsSpan = document.querySelector(".seconds");
 
-let countDownDate = new Date("Aug 16, 2024 09:17:00").getTime();
+let countDownDate = new Date("Dec 3, 2024 14:30:00").getTime();
 let now = new Date().getTime();
 let distance = countDownDate - now;
 

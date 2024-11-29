@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
     plusSlides(1);
   }, 5000);
 
+  
+
 
 });
 
