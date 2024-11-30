@@ -138,6 +138,7 @@
     }
     .header__navigation {
         display: flex;
+        justify-content: flex-end;
     }
 
     .mission__container .bottom__content {
@@ -155,7 +156,7 @@
     .header .header__logo {
         flex-grow: 0;
         margin-left: 2rem;
-        margin-right: 40rem;
+        margin-right: 2rem;
     }
     .header .header__logo a {
         width: 10rem;
